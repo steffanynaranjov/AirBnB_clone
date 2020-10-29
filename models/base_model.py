@@ -2,22 +2,21 @@
 """
 Class base model
 """
-import datetime
+from datetime import datetime
 import uuid
-import json
-from models import storage
+import models
 
 
 class BaseModel:
     """
     first class base
     """
-    def __init__(self, *args, **kwards):
+    def __init__(self, *args, **kwargs):
         """
         starting the method
         """
-        if kward:
-            for key, value in kwards.items():
+        if kwargs:
+            for key, value in kwargs.items():
                 if key != "__class__":
                     if key in ["created_at", "updated_at"]:
                         value = datetime.strptime(value,
@@ -25,9 +24,9 @@ class BaseModel:
                     setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
-            self.update_at = datetime.now()
             self.created_at = datetime.now()
-            storage.new(self)
+            self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """
@@ -41,16 +40,16 @@ class BaseModel:
         """
         a update for the date method
         """
-        self.update_at = datetime.now()
-        storage.new(self)
-        storage.save()
+        self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """
         returns a dictionary
         """
-        new_dict = self.__dict__.copy()
-        new_dict["__class__"] = self.__class__.__name__
-        new_dict["created_at"] = dict["created_at"].isoformat()
-        new_dict["updated_at"] = dict["updated_at"].isoformat()
+        new_dict = dict(self.__dict__)
+        new_dict["__class__"] = type(self).__name__
+        new_dict["created_at"] = new_dict["created_at"].isoformat()
+        new_dict["updated_at"] = new_dict["updated_at"].isoformat()
         return new_dict
