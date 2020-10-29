@@ -7,6 +7,7 @@ import uuid
 import json
 from models import storage
 
+
 class BaseModel:
     """
     first class base
