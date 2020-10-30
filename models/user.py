@@ -7,7 +7,7 @@ from models.base_model import BaseModel
 
 class user(BaseModel):
     """
-    class user
+    class user with the parameters
     """
     email = ""
     password = ""
