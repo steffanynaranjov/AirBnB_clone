@@ -5,7 +5,7 @@ publuc class user
 from models.base_model import BaseModel
 
 
-class user(BaseModel):
+class User(BaseModel):
     """
     class user with the parameters
     """
