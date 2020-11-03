@@ -27,9 +27,7 @@ class HBNBCommand(cmd.Cmd):
         onecmd help us to implement an empty line + ENTER
         shouldnt execute anything
         """
-        if self.lastcmd:
-            self.lastcmd = ""
-            return self.onecmd('\n')
+        pass
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
