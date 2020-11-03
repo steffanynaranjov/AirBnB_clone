@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""
+The cmd module is mainly useful for building custom shells
+that let a user work with a program interactively.
+console.py is the entry point command line interpreter for Airbhb project
+"""
 import cmd
 import models
 from models.base_model import BaseModel
-
-""" The cmd module is mainly useful for building custom shells
-that let a user work with a program interactively. """
 
 
 class HBNBCommand(cmd.Cmd):
