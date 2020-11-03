@@ -7,7 +7,6 @@ from models.base_model import BaseModel
 import datetime
 import os
 import models
-from models.engine.file_storage import FileStorage
 
 
 class BaseModelTest(unittest.TestCase):
@@ -48,16 +47,6 @@ class BaseModelTest(unittest.TestCase):
         b = BaseModel()
         s = "[BaseModel] ({}) {}".format(b.id, b.__dict__)
         self.assertEqual(s, str(b))
-
-    def test_file(self):
-        """
-        test file storage
-        """
-        FileStorage._FileStorage__objects = {}
-        try:
-            os.remove(FileStorage._FileStorage__file_path)
-        except IOError:
-            pass
 
     def test_basemodel_save_more_args(self):
         """
