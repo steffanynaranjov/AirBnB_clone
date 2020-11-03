@@ -8,6 +8,7 @@ import datetime
 from models.engine.file_storage import FileStorage
 import os
 import json
+import models
 
 
 class BaseModelTest(unittest.TestCase):
@@ -66,6 +67,16 @@ class BaseModelTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             BaseModel.save(self, 1, "Hello")
 
+    def test_docstring_mandatory(self):
+        """
+        docstring
+        """
+        self.assertIsNotNone(models.base_model.__doc__)
+        self.assertIsNotNone(BaseModel.__doc__)
+        self.assertIsNotNone(BaseModel.__init__.__doc__)
+        self.assertIsNotNone(BaseModel.__str__.__doc__)
+        self.assertIsNotNone(BaseModel.save.__doc__)
+        self.assertIsNotNone(BaseModel.to_dict.__doc__)
 
 
 if __name__ == "__main__":
