@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 module for init FileStorage
 To create a unique FileStorage instance for the application improting
