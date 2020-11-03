@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """ file storage unittest """
 
+
 import unittest
 import models
 from models.engine.file_storage import FileStorage
 import os
+
 
 class TestFileStorage(unittest.TestCase):
     """ The unittest module provides a rich set of tools for
@@ -30,7 +32,8 @@ class TestFileStorage(unittest.TestCase):
         """ test files are with execution, read, write and existence permission
 
         X_OK Value to include in the mode parameter of access()
-        to determine if path can be executed so we passed the file_storage path.
+        to determine if path can be executed so we passed
+        the file_storage path.
 
         R_OK Value to include in the mode parameter of access() to test
         the readability of path.
