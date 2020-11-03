@@ -27,6 +27,9 @@ class TestFileStorage(unittest.TestCase):
         """
         self.assertIsNotNone(models.engine.file_storage.__doc__)
         self.assertIsNotNone(FileStorage.__doc__)
+        self.assertIsNotNone(FileStorage.__init__.__doc__)
+        self.assertIsNotNone(FileStorage.save.__doc__)
+        self.assertIsNotNone(FileStorage.new.__doc__)
 
     def test_permissions(self):
         """ test files are with execution, read, write and existence permission
