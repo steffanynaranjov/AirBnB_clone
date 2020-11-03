@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import cmd
+from models.base_model import BaseModel
+import models
+
 """ The cmd module is mainly useful for building custom shells
 that let a user work with a program interactively. """
 
@@ -9,11 +12,11 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
-        """ EOF to exit the program """
+        """EOF to exit the program """
         return True
 
     def do_quit(self, arg):
-        """ quit command to exit the program"""
+        """Quit command to exit the program"""
         return True
 
     def emptyline(self):
