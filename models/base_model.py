@@ -55,7 +55,6 @@ class BaseModel:
         with the current datetim
         """
         self.updated_at = datetime.now()
-        models.storage.new(self)
         models.storage.save()
 
     def to_dict(self):
