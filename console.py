@@ -30,6 +30,3 @@ class HBNBCommand(cmd.Cmd):
         if self.lastcmd:
             self.lastcmd = ""
             return self.onecmd('\n')
-
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
