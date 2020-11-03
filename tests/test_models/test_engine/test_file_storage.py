@@ -45,3 +45,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(os.access("models/engine/file_storage.py", os.R_OK))
         self.assertTrue(os.access("models/engine/file_storage.py", os.W_OK))
         self.assertTrue(os.access("models/engine/file_storage.py", os.F_OK))
+
+    def closing(self):
+        """ closing the instance """
+        del self.test1
