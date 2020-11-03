@@ -6,7 +6,6 @@ from datetime import datetime
 import uuid
 import models
 import json
-from models import storage
 
 
 class BaseModel:
