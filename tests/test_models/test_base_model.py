@@ -5,6 +5,9 @@ unittest for base model
 import unittest
 from models.base_model import BaseModel
 import datetime
+from models.engine.file_storage import FileStorage
+import os
+import json
 
 
 class BaseModelTest(unittest.TestCase):
@@ -45,6 +48,24 @@ class BaseModelTest(unittest.TestCase):
         b = BaseModel()
         s = "[BaseModel] ({}) {}".format(b.id, b.__dict__)
         self.assertEqual(s, str(b))
+
+    def test_file(self):
+        """
+        test file storage
+        """
+        FileStorage._FileStorage__objects = {}
+        try:
+            os.remove(FileStorage._FileStorage__file_path)
+        except IOError:
+            pass
+
+    def test_basemodel_save_more_args(self):
+        """
+        tests to save with more arguments
+        """
+        with self.assertRaises(TypeError):
+            BaseModel.save(self, 1, "Hello")
+
 
 
 if __name__ == "__main__":
