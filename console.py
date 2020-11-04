@@ -110,6 +110,30 @@ class HBNBCommand(cmd.Cmd):
             if len(new_list) != 0:
                 print(new_list)
 
+    def do_update(self, line):
+        """
+        Is a command to destroy a instance
+        """
+        if line is None or line == "":
+            print("** class name missing **")
+        elif line.split(" ")[0] not in HBNBCommand.air_classes:
+            print("** class doesn't exist **")
+        elif len(line.split(" ")) < 2:
+            print("** instance id missing **")
+        elif len(line.split(" ")) < 3:
+            print("** attribute name missing **")
+        elif len(line.split(" ")) < 4:
+            print("** value missing **")
+        else:
+            key = "{}.{}".format(line.split(" ")[0], line.split(" ")[1])
+            if key not in storage.all():
+                print("** no instance found **")
+            else:
+                obj_upt = line.split()[2]
+                value = line.split()[3]
+                setattr(storage.all()[key], obj_upt, value)
+                storage.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
