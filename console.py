@@ -112,7 +112,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
-        Is a command to destroy a instance
+        Is a command to update
         """
         if line is None or line == "":
             print("** class name missing **")
