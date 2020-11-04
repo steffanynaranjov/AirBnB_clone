@@ -1,4 +1,4 @@
-<h1 class="gap">Project 0x00. AirBnB clone - The console</h1>
+<h1 class="gap">AirBnB Clone Porject - The console</h1>
 
 <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T171512Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=57083003b3adb1678eb58731caa707a14d314305ef9a616a3d7d9271985b0952" alt="" style="" /></p>
 
@@ -27,7 +27,7 @@
 <h3>The console</h3>
 
 <ul>
-<li>create your data model</li>
+<li>create our data model</li>
 <li>manage (create, update, destroy, etc) objects via a console / command interpreter</li>
 <li>store and persist objects to a file (JSON file)</li>
 </ul>
@@ -100,8 +100,6 @@ from our console code (the command interpreter itself) and from the front-end an
 <pre><code>$ ./console.py
 (hbnb) help
 
-Documented commands (type help &lt;topic&gt;):
-========================================
 EOF  help  quit
 
 (hbnb)
@@ -114,8 +112,6 @@ $
 <pre><code>$ echo &quot;help&quot; | ./console.py
 (hbnb)
 
-Documented commands (type help &lt;topic&gt;):
-========================================
 EOF  help  quit
 (hbnb) 
 $
@@ -125,10 +121,8 @@ $
 $ cat test_help | ./console.py
 (hbnb)
 
-Documented commands (type help &lt;topic&gt;):
-========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 </code></pre>
 
@@ -137,7 +131,8 @@ $
 <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/99e1a8f2be8c09d5ce5ac321e8cf39f0917f8db5.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T172754Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=386149c802af5f45dfe5ac353b0ddac504a823212712509ca8cf91eae3795bea" alt="" style="" /></p>
 
 
-<h2>Installation>
+
+<h2>Installation</h2>
 <ul>
 <li> git clone </li>
 <li> cd AirBnB_clone </li>
