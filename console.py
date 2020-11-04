@@ -75,6 +75,24 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print(storage.all()[key])
 
+    def do_destroy(self, line):
+        """
+        Is a command to destroy a instance
+        """
+        if line is None or line == "":
+            print("** class name missing **")
+        elif line.split(" ")[0] not in HBNBCommand.air_classes:
+            print("** class doesn't exist **")
+        elif len(line.split(" ")) < 2:
+            print("** instance id missing **")
+        else:
+            key = "{}.{}".format(line.split(" ")[0], line.split(" ")[1])
+            if key not in storage.all():
+                print("** no instance found **")
+            else:
+                del storage.all()[key]
+                storage.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
