@@ -1,6 +1,7 @@
-<h1 class="gap">AirBnB Clone Porject - The console</h1>
-
-<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T171512Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=57083003b3adb1678eb58731caa707a14d314305ef9a616a3d7d9271985b0952" alt="" style="" /></p>
+<h1 class="gap">AirBnB Clone Project - The console</h1>
+<div class="gap formatted-content">
+ <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T173619Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bf3268e913b06e6bb82fbac6a08a732f47311df15787fe1b5ca8d1e4b1cc3052" alt="" style="" /></p>
+</div>
 
 <h2>Background Context</h2>
 
@@ -38,8 +39,6 @@ from our console code (the command interpreter itself) and from the front-end an
 <p>This abstraction will also allow us to change the type of storage easily without updating all of our codebase.</p>
 
 <p>The console will be a tool to validate this storage engine</p>
-
-<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T172754Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ca50dc96b3ef59dae2bee1527ebb2b419f786e1e56b40dcfba0b9f7c760df8aa" alt="" style="" /></p>
 
 <h2>Requirements</h2>
 
@@ -125,11 +124,6 @@ EOF  help  quit
 (hbnb)
 $
 </code></pre>
-
-
-<h2>Data diagram</h2>
-<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/99e1a8f2be8c09d5ce5ac321e8cf39f0917f8db5.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20201104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201104T172754Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=386149c802af5f45dfe5ac353b0ddac504a823212712509ca8cf91eae3795bea" alt="" style="" /></p>
-
 
 
 <h2>Installation</h2>
