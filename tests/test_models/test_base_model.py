@@ -21,26 +21,6 @@ class BaseModelTest(unittest.TestCase):
         secondins = BaseModel()
         self.assertNotEqual(firstins, secondins)
 
-    def test_instance(self):
-        """ if is instance of BaseModel """
-        test1 = BaseModel()
-        self.assertIsInstance(test1, BaseModel)
-
-    def test_basemodel_str(self):
-        """
-        test base model print
-        """
-        b = BaseModel()
-        s = "[BaseModel] ({}) {}".format(b.id, b.__dict__)
-        self.assertEqual(s, str(b))
-
-    def test_basemodel_save_more_args(self):
-        """
-        tests to save with more arguments
-        """
-        with self.assertRaises(TypeError):
-            BaseModel.save(self, 1, "Hello")
-
     def test_docstring_mandatory(self):
         """
         docstring
