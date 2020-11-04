@@ -15,14 +15,13 @@ from models.review import Review
 from models import storage
 
 
-air_classes = {"BaseModel": BaseModel, "User": User, "State": State,
-               "City": City, "Amenity": Amenity, "Place": Place,
-               "Review": Review}
-
-
 class HBNBCommand(cmd.Cmd):
     """ entry point of the command interpreter """
     prompt = '(hbnb) '
+
+    air_classes = {"BaseModel": BaseModel, "User": User, "State": State,
+                   "City": City, "Amenity": Amenity, "Place": Place,
+                   "Review": Review}
 
     def do_EOF(self, line):
         """EOF to exit the program """
@@ -58,6 +57,23 @@ class HBNBCommand(cmd.Cmd):
             instance = air_classes[arg]()
             instance.save()
             print(instance.id)
+
+    def do_show(self, line):
+        """
+        String representation of a id instance
+        """
+        if line is None or line == "":
+            print("** class name missing **")
+        elif line.split(" ")[0] not in HBNBCommand.air_classes:
+            print("** class doesn't exist **")
+        elif len(line.split(" ")) < 2:
+            print("** instance id missing **")
+        else:
+            key = "{}.{}".format(line.split(" ")[0], line.split(" ")[1])
+            if key not in storage.all():
+                print("** no instance found **")
+            else:
+                print(storage.all()[key])
 
 
 if __name__ == '__main__':
