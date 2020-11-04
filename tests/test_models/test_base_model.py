@@ -34,11 +34,10 @@ class BaseModelTest(unittest.TestCase):
         self.assertTrue(obj.id != obj2.id)
         self.assertTrue(obj1.id != obj2.id)
 
-    def test_setUp(self):
-        """
-        test the set up
-        """
-        pass
+    def test_instance(self):
+        """ if is instance of BaseModel """
+        test1 = BaseModel()
+        self.assertIsInstance(test1, BaseModel)
 
     def test_basemodel_str(self):
         """
@@ -74,7 +73,3 @@ class BaseModelTest(unittest.TestCase):
         self.assertTrue(os.access("models/base_model.py", os.R_OK))
         self.assertTrue(os.access("models/base_model.py", os.W_OK))
         self.assertTrue(os.access("models/base_model.py", os.F_OK))
-
-
-if __name__ == "__main__":
-    unittest.main()
