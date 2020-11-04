@@ -5,8 +5,19 @@ that let a user work with a program interactively.
 console.py is the entry point command line interpreter for Airbhb project
 """
 import cmd
-import models
 from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+from models import storage
+
+
+air_classes = {"BaseModel": BaseModel, "User": User, "State": State,
+               "City": City, "Amenity": Amenity, "Place": Place,
+               "Review": Review}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -30,6 +41,24 @@ class HBNBCommand(cmd.Cmd):
         shouldnt execute anything
         """
         pass
+
+    def create(self, arg):
+        """ Creates a new instance of BaseModel, saves it
+        (to the JSON file) and prints the id.
+        Args:
+            arg(str): given class in the command line interpreter
+        If the class name is missing, print ** class name missing **
+        If the class name doesnt exist, print ** class doesn't exist **
+        """
+        if not arg:
+            print("** class name missing **")
+        elif arg not in air_classes.keys():
+            print("** class doesn't exist **")
+        else:
+            instance = air_classes[arg]()
+            instance.save()
+            print(instance.id)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
