@@ -40,6 +40,8 @@ from our console code (the command interpreter itself) and from the front-end an
 
 <p>The console will be a tool to validate this storage engine</p>
 
+<p><img src="https://camo.githubusercontent.com/dd982658e990990e8d6d7158e249e1e5aee8aee8/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f696e7472616e65742d70726f6a656374732d66696c65732f636f6e63657074732f37342f68626e625f73746570352e706e67" alt="" style="" /></p>
+
 <h2>Requirements</h2>
 
 <h3>Python Scripts</h3>
@@ -125,6 +127,8 @@ EOF  help  quit
 $
 </code></pre>
 
+<h2>Data diagram</h2>
+<p><img src="https://camo.githubusercontent.com/6195f899c82c256d400b991958904eb069b73ab1/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f696e7472616e65742d70726f6a656374732d66696c65732f686f6c626572746f6e7363686f6f6c2d6869676865722d6c6576656c5f70726f6772616d6d696e672b2f3238392f416972426e625f44425f6469616772616d6d2e6a7067" alt="" style="" /></p>
 
 <h2>Installation</h2>
 <ul>
