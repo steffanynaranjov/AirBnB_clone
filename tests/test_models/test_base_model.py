@@ -36,7 +36,7 @@ class BaseModelTest(unittest.TestCase):
         """
         test permissions
         """
-        self.assertFalse(os.access("models/base_model.py", os.X_OK))
+        self.assertTrue(os.access("models/base_model.py", os.X_OK))
         self.assertTrue(os.access("models/base_model.py", os.R_OK))
         self.assertTrue(os.access("models/base_model.py", os.W_OK))
         self.assertTrue(os.access("models/base_model.py", os.F_OK))
