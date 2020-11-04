@@ -66,6 +66,15 @@ class BaseModelTest(unittest.TestCase):
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
 
+    def test_permissions(self):
+        """
+        test permissions
+        """
+        self.assertFalse(os.access("models/base_model.py", os.X_OK))
+        self.assertTrue(os.access("models/base_model.py", os.R_OK))
+        self.assertTrue(os.access("models/base_model.py", os.W_OK))
+        self.assertTrue(os.access("models/base_model.py", os.F_OK))
+
 
 if __name__ == "__main__":
     unittest.main()
