@@ -73,3 +73,13 @@ class BaseModelTest(unittest.TestCase):
         self.assertTrue(os.access("models/base_model.py", os.R_OK))
         self.assertTrue(os.access("models/base_model.py", os.W_OK))
         self.assertTrue(os.access("models/base_model.py", os.F_OK))
+
+    def test_instace(self):
+        """
+        test instance
+        """
+        BaseIns = BaseModel()
+        self.assertIsInstance(BaseIns, BaseModel)
+
+if __name__ == '__main__':
+    unittest.main()
