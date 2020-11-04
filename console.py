@@ -41,7 +41,7 @@ class HBNBCommand(cmd.Cmd):
         """
         pass
 
-    def do_create(self, arg):
+    def do_create(self, line):
         """ Creates a new instance of BaseModel, saves it
         (to the JSON file) and prints the id.
         Args:
@@ -49,14 +49,15 @@ class HBNBCommand(cmd.Cmd):
         If the class name is missing, print ** class name missing **
         If the class name doesnt exist, print ** class doesn't exist **
         """
-        if not arg:
+        if line is None or line == "":
             print("** class name missing **")
-        elif arg not in air_classes.keys():
+        elif line not in HBNBCommand.air_classes:
             print("** class doesn't exist **")
         else:
-            instance = air_classes[arg]()
+            instance = HBNBCommand.air_classes[line]()
             instance.save()
             print(instance.id)
+            storage.save()
 
     def do_show(self, line):
         """
