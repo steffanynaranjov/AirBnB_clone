@@ -27,12 +27,9 @@ class BaseModelTest(unittest.TestCase):
         """
         test to generate the id
         """
-        obj = BaseModel()
-        obj1 = BaseModel()
-        obj2 = BaseModel()
-        self.assertTrue(obj.id != obj1.id)
-        self.assertTrue(obj.id != obj2.id)
-        self.assertTrue(obj1.id != obj2.id)
+        firstins = BaseModel()
+        secondins = BaseModel()
+        self.assertNotEqual(firstins, secondins)
 
     def test_instance(self):
         """ if is instance of BaseModel """
@@ -80,6 +77,7 @@ class BaseModelTest(unittest.TestCase):
         """
         BaseIns = BaseModel()
         self.assertIsInstance(BaseIns, BaseModel)
+
 
 if __name__ == '__main__':
     unittest.main()
