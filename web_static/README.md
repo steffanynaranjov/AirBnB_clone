@@ -10,7 +10,6 @@
   <article id="description" class="gap formatted-content">
     <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Welcome to CSS <a href="https://twitter.com/holbertonschool">@holbertonschool</a> <a href="https://t.co/qu5iypZqTm">pic.twitter.com/qu5iypZqTm</a></p>&mdash; Holberton School (@holbertonschool) <a href="https://twitter.com/holbertonschool/status/831650456464093185">February 14, 2017</a></blockquote>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <h2>Background Context</h2>
 
